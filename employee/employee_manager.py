@@ -1,7 +1,6 @@
 from .models import Employee
 from faker import Faker
 
-
 # Create an employee manager class that will manage the employees
 class EmployeeManager:
     def __init__(self):
