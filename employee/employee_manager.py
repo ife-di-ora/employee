@@ -10,7 +10,7 @@ class EmployeeManager:
     def add_employee(self, employee):
         for emp in self.employees:
             if emp['id'] == employee['id']:
-                raise ValueError('Employee already exists')
+                raise ValueError(f'An employee with id: {emp['id']} already exists')
         self.employees.append(employee)
 
 # Class Method to get an employee from the list of employees     
@@ -33,8 +33,8 @@ def main():
         #Add five random employees
         for x in range(5):
             employee = Employee (
-                # id=faker.random_int(min=1, max=15),
-                id=x+1,
+                id=faker.random_int(min=1, max=4),
+                # id=x+1,
                 name=faker.name().strip(),  
                 # name=input('Enter Employee Name: ').strip(), # did not use faker so I could test wrong input
                 age=faker.random_int(min=18, max=65),
